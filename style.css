@@ -1,0 +1,140 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 800px;
+}
+
+.player-panel {
+    display: flex;
+    font-size: 45px;
+    margin-bottom: 32px;
+}
+
+.player-panel div {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+.player-panel img {
+    width: 60px;
+    width: 60px;
+    margin-right: 16px;
+}
+
+.player-inactive {
+    opacity: 0.5;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+tr {
+    width: 399px;
+}
+
+td {
+    border: 5px solid black;
+    position: relative;
+    width: 133px;
+    height: 133px;
+    cursor: pointer;
+}
+
+td:hover {
+    background-color: rgba(190, 190, 190, 0.2);
+    transition: background-color 0.4s ease-in-out;
+}
+
+tr:first-child td {
+    border-top: 0;
+}
+
+tr td:first-child {
+    border-left: 0;
+}
+
+tr:last-child td {
+    border-bottom: 0;
+}
+
+tr td:last-child {
+    border-right: 0;
+}
+
+.shape {
+    position: absolute;
+    bottom: 26px;
+    left: 26px;
+    width: 80px;
+    height: 80px;
+}
+
+.d-none {
+    display: none;
+}
+
+.horizontal-line {
+    height: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 355px;
+    position: relative;
+    transform: scaleX(0.0);
+    transition: transform 225ms ease-in-out;
+    z-index: 1;
+}
+
+.make-vertical {
+    transform: rotate(90deg) scaleX(0.0);
+}
+
+.game-over {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    max-width: 100%;
+    opacity: 0.8;
+    z-index: 2;
+    animation: zoomIn 225ms ease-in-out;
+}
+
+@keyframes zoomIn {
+    form {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.game-over img{
+    object-fit: contain;
+    max-height: 600px;
+    position: relative;
+}
+.restart-btn {
+    border: 1 solid rgba(86, 86, 86, 0.5);
+    background-color: rgba(28, 11, 127, 0.9);
+    z-index: 2;
+    width: 300px;
+    height: 100px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    position: relative;
+    bottom: 62px;
+    position: relative;
+    top: 600px;
+}
+
+.restart-btn:hover {
+    background-color: rgb(67, 57, 127);
+}
